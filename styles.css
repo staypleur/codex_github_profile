@@ -5,9 +5,10 @@
   --ink: #1b2031;
   --muted: #505972;
   --line: #dce1ed;
-  --accent: #3048bb;
-  --accent-dark: #223590;
-  --accent-soft: #e9edff;
+  --accent: #1756b0;
+  --accent-dark: #124283;
+  --accent-soft: #e6f1ff;
+  --accent-line: #9cc6f5;
   font-family: system-ui, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
   color: var(--ink);
   background: var(--background);
@@ -76,7 +77,10 @@ nav a, .footer-inner a {
 }
 nav a:hover, .footer-inner a:hover { text-decoration: underline; }
 
-.hero { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.hero {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+  background: radial-gradient(ellipse at 88% 25%, var(--accent-soft), transparent 65%);
+}
 .eyebrow {
   display: flex;
   align-items: center;
@@ -126,6 +130,7 @@ h2 { margin-top: 0.5rem; font-size: clamp(1.85rem, 4vw, 3rem); }
   gap: 1.35rem 2rem;
   padding: clamp(1.1rem, 3vw, 2rem);
   border: 1px solid var(--line);
+  border-inline-start: 3px solid var(--accent-line);
   border-radius: 0.7rem;
   background: var(--surface);
 }
